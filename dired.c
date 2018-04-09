@@ -894,7 +894,7 @@ dired_(char *dname)
 	bp = bfind(dname, TRUE);
 	bp->b_flag |= BFREADONLY | BFIGNDIRTY;
 
-	if ((d_exec(2, bp, NULL, "ls", "-al", dname, NULL)) != TRUE)
+	if ((d_exec(2, bp, NULL, "ls", "-alh", dname, NULL)) != TRUE)
 		return (NULL);
 
 	/* Find the line with ".." on it. */
